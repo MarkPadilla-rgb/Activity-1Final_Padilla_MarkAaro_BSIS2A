@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Storage - BLFM</title>
+  <link rel="stylesheet" href="Storage.css">
+ </head>
+
+ <body>
+ <nav id="sidebar">
+  <ul>
+   <li>
+     <span class="logo">BLFM</span>
+     <button id="sidebarlogo"><img src="logo.png" width="50" height="50"></button>
+   </li>
+    <li>
+      <a href="landingpage2.html">
+        <span>Home</span> 
+        <img class="sidebar-iconhome" src="home-icon.png"  data-hover="home-icon2.png"  width="50" height="50">
+       </a>
+    </li>
+   <li>
+    <a href="MAMP_OOP_WD_Project.html">
+     <span>Profile</span>
+      <img class="sidebar-iconprof" src="prof-icon.png"  data-hover="prof-icon2.png"  width="50" height="50">
+    </a>
+   </li>
+   <li class="active">
+    <a href="Storage.html">
+    <span>Storage</span>
+    <img class="sidebar-iconstor" src="storage-icon.png"  data-hover="storage-icon2.png"  width="50" height="50">
+    </a>
+   </li>
+   <li>
+    <a href="About us.html">
+     <span>About Us</span>
+      <img class="sidebar-iconabout" src="about-icon.png"  data-hover="about-icon2.png"  width="50" height="50">
+    </a>
+   </li>
+  </ul>
+ </nav>
+ <main>
+  <div class="container">
+   <h1>Storage</h1>
+   <p><i>This is where you can put file for the site to hold.</i></p>
+    
+   <div class="storage-bar-section">
+    <h2>Storage Usage</h2>
+    <div style="width: 100%; background: #ddd; border-radius: 10px;">
+    <div id="storageBar" style="height: 20px; width: 0%; background: green; border-radius: 10px;"></div> 
+    </div>
+    <p id="storageText">0 KB / 5120 KB used</p>
+  </div>
+  
+   <div class="file-input-section">
+    <h2>Upload Files</h2>
+    <input type="file" id="fileInput" multiple>
+    <button id="uploadBtn">Upload</button>
+   </div>
+
+   <div class="files-section">
+    <h2>Your Files</h2>
+    <div id="filesList">
+     <p>No files uploaded yet.</p>
+    </div>
+   </div>
+
+   <div class="file-viewer-section" id="viewerSection" style="display:none;">
+    <h2>File Viewer</h2>
+    <button id="closeViewerBtn">Close Viewer</button>
+    <div id="fileContent" style="border: 1px solid #000000; padding: 10px; margin-top: 10px; min-height: 200px; background: #000000;"></div>
+   </div>
+  </div>
+
+ </main>
+
+ <script src="storage.js"></script>
+ <script src="Theme.js"></script>
+  <script>
+      const sidebar = document.getElementById("sidebar");
+      const sidebarBtn = document.getElementById("sidebarlogo");
+      const toggle = document.getElementById("logo");
+  
+      // Sidebar toggle
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+
+      toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+    </script>
+ </body>
+</html>
